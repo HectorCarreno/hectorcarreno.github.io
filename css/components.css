@@ -16,10 +16,16 @@ header .container {
   align-items: center;
 }
 
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-32);
+}
+
 .nav-right {
   display: flex;
   align-items: center;
-  gap: var(--space-16);
+  gap: var(--space-12);
 }
 
 .logo img {
@@ -32,7 +38,18 @@ header .container {
   transform: scale(1.05);
 }
 
-#theme-toggle {
+.nav-list {
+  display: flex;
+  gap: var(--space-32);
+}
+
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16); /* Increased gap from 12 to 16 for better separation */
+}
+
+#theme-toggle, #language-switcher {
   background: var(--color-bg-elevated);
   border: 1px solid var(--color-border);
   cursor: pointer;
@@ -40,12 +57,16 @@ header .container {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--space-8);
+  padding: 0 var(--space-12);
+  height: 40px;
   border-radius: var(--radius-md);
   transition: all var(--transition-fast);
+  min-width: 40px;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 
-#theme-toggle:hover {
+#theme-toggle:hover, #language-switcher:hover {
   border-color: var(--color-primary);
   color: var(--color-primary);
 }
@@ -72,11 +93,6 @@ header .container {
   .nav-toggle {
     display: none;
   }
-}
-
-.nav-list {
-  display: flex;
-  gap: var(--space-32);
 }
 
 @media (max-width: 767px) {

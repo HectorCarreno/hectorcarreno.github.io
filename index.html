@@ -32,25 +32,32 @@
     <header>
         <nav aria-label="Main Navigation">
             <div class="container">
-                <a href="#hero" class="logo" aria-label="Hector Carreño Home">
-                    <img src="assets/images/logo.png" alt="HC Logo">
-                </a>
+                <div class="nav-left">
+                    <a href="#hero" class="logo" aria-label="Hector Carreño Home">
+                        <img src="assets/images/logo.png" alt="HC Logo">
+                    </a>
+                    <ul id="primary-navigation" data-visible="false" class="nav-list">
+                        
+                        <li><a href="#about" data-i18n="nav_about">About</a></li>
+                        <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+                        <li><a href="#experience" data-i18n="nav_experience">Experience</a></li>
+                        <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+                        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+                    </ul>
+                </div>
                 <div class="nav-right">
                     <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
                         <span class="sr-only">Menu</span>
                     </button>
+                    <div class="nav-controls">
+                        <button id="theme-toggle" aria-label="Toggle Theme">
+                            <span class="material-icons" id="theme-icon">dark_mode</span>
+                        </button>
+                        <button id="language-switcher" aria-label="Toggle Language">
+                            EN
+                        </button>
+                    </div>
                 </div>
-                <ul id="primary-navigation" data-visible="false" class="nav-list">
-                    
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <button id="theme-toggle" aria-label="Toggle Theme">
-                    <span class="material-icons" id="theme-icon">dark_mode</span>
-                </button>
             </div>
         </nav>
     </header>
@@ -59,12 +66,12 @@
         <section id="hero" class="hero-section">
             <div class="container hero-content">
                 <div class="hero-left">
-                    <h1>Hector F. Carreno</h1>
-                    <p class="title">FullStack developer / Electronic engineer</p>
-                    <p class="value-proposition">Building efficient, scalable systems by leveraging AI tools, automated workflows, and robust architectural solutions.</p>
+                    <h1 data-i18n="hero_name">Hector F. Carreno</h1>
+                    <p class="title" data-i18n="hero_title">FullStack developer / Electronic engineer</p>
+                    <p class="value-proposition" data-i18n="hero_value_proposition">Building efficient, scalable systems by leveraging AI tools, automated workflows, and robust architectural solutions.</p>
                     <div class="hero-ctas">
-                        <a href="#projects" class="button button-primary">View Projects</a>
-                        <a href="#contact" class="button button-secondary">Contact Me</a>
+                        <a href="#projects" class="button button-primary" data-i18n="hero_cta_projects">View Projects</a>
+                        <a href="#contact" class="button button-secondary" data-i18n="hero_cta_contact">Contact Me</a>
                     </div>
                 </div>
                 <div class="hero-right">
@@ -75,30 +82,30 @@
 
         <section id="about" class="about-section">
             <div class="container">
-                <h2>About Me</h2>
-                <p>Full-stack developer with 5+ years of experience, a keen eye for detail, and a passion for performance optimization. I am deeply committed to building efficient, scalable systems by leveraging AI tools like Copilot, AI agents, and automated workflows to accelerate development and enhance architecture.</p>
-                <p>Beyond technical execution, I thrive in collaborative environments that value teamwork and continuous learning. I consistently tackle complex challenges to deliver high-quality, innovative results.</p>
+                <h2 data-i18n="about_title">About Me</h2>
+                <p data-i18n="about_p1">Full-stack developer with 5+ years of experience, a keen eye for detail, and a passion for performance optimization. I am deeply committed to building efficient, scalable systems by leveraging AI tools like Copilot, AI agents, and automated workflows to accelerate development and enhance architecture.</p>
+                <p data-i18n="about_p2">Beyond technical execution, I thrive in collaborative environments that value teamwork and continuous learning. I consistently tackle complex challenges to deliver high-quality, innovative results.</p>
             </div>
         </section>
 
         <section id="skills" class="skills-section">
             <div class="container">
-                <h2>Skills</h2>
+                <h2 data-i18n="skills_title">Skills</h2>
                 <div class="skills-grid">
                     <div class="skill-category">
-                        <h3>Development Stack</h3>
+                        <h3 data-i18n="skills_cat1">Development Stack</h3>
                         <div class="skill-pills">
                             <span>C#</span><span>C++</span><span>TypeScript</span><span>JavaScript</span><span>Next.js</span><span>React.js</span><span>.NET</span>
                         </div>
                     </div>
                     <div class="skill-category">
-                        <h3>Cloud & Infrastructure</h3>
+                        <h3 data-i18n="skills_cat2">Cloud & Infrastructure</h3>
                         <div class="skill-pills">
                             <span>AWS</span><span>Azure</span><span>Docker</span><span>CI/CD</span><span>GitHub Actions</span><span>Portainer</span>
                         </div>
                     </div>
                     <div class="skill-category">
-                        <h3>Databases & Tools</h3>
+                        <h3 data-i18n="skills_cat3">Databases & Tools</h3>
                         <div class="skill-pills">
                             <span>MongoDB</span><span>PostgreSQL</span><span>MySQL</span><span>Git</span><span>JIRA</span><span>Scrum</span>
                         </div>
@@ -109,25 +116,25 @@
 
         <section id="experience" class="experience-section">
             <div class="container">
-                <h2>Experience</h2>
+                <h2 data-i18n="experience_title">Experience</h2>
                 <div class="timeline">
                     <article class="timeline-item">
-                        <h3>FullStack Developer</h3>
-                        <p class="position">Hymteks - Remote</p>
-                        <p class="dates">Nov 2024 - Currently</p>
-                        <p>Develop and enhance high-performance platforms tailored for Enterprise Resource Management (ERM). Implement automated workflows and AI agents into backend processes to optimize system efficiency and data management. Streamline AWS DevOps operations by designing robust CI/CD pipelines to ensure seamless, automated deployments.</p>
+                        <h3 data-i18n="exp1_title">FullStack Developer</h3>
+                        <p class="position" data-i18n="exp1_comp">Hymteks - Remote</p>
+                        <p class="dates" data-i18n="exp1_dates">Nov 2024 - Currently</p>
+                        <p data-i18n="exp1_desc">Develop and enhance high-performance platforms tailored for Enterprise Resource Management (ERM). Implement automated workflows and AI agents into backend processes to optimize system efficiency and data management. Streamline AWS DevOps operations by designing robust CI/CD pipelines to ensure seamless, automated deployments.</p>
                     </article>
                     <article class="timeline-item">
-                        <h3>Software Engineer</h3>
-                        <p class="position">TradeView markets ltd - Remote</p>
-                        <p class="dates">May 2021 - Currently</p>
-                        <p>Collaborated with the platforms team to design and maintain a clean, scalable code base for enterprise software, leveraging GitHub Copilot to accelerate code generation and refactoring. Architected and implemented complex technical solutions featuring API integrations, multithreading, and embedded databases. Managed end-to-end testing across test, demo, and production environments, integrating AI-assisted tools to streamline test generation and ensure optimal workflows. Provided comprehensive platform maintenance and technical client support to ensure system stability.</p>
+                        <h3 data-i18n="exp2_title">Software Engineer</h3>
+                        <p class="position" data-i18n="exp2_comp">TradeView markets ltd - Remote</p>
+                        <p class="dates" data-i18n="exp2_dates">May 2021 - Currently</p>
+                        <p data-i18n="exp2_desc">Collaborated with the platforms team to design and maintain a clean, scalable code base for enterprise software, leveraging GitHub Copilot to accelerate code generation and refactoring. Architected and implemented complex technical solutions featuring API integrations, multithreading, and embedded databases. Managed end-to-end testing across test, demo, and production environments, integrating AI-assisted tools to streamline test generation and ensure optimal workflows. Provided comprehensive platform maintenance and technical client support to ensure system stability.</p>
                     </article>
                     <article class="timeline-item">
-                        <h3>Embedded Systems Developer</h3>
-                        <p class="position">Freelancer - Remote</p>
-                        <p class="dates">February 2018 - November 2024</p>
-                        <p>Develop firmware and hardware design for different applications like motor drivers, medical applications, temperature controllers, custom keyboards, power supply, solar energy conversion, and so on.</p>
+                        <h3 data-i18n="exp3_title">Embedded Systems Developer</h3>
+                        <p class="position" data-i18n="exp3_comp">Freelancer - Remote</p>
+                        <p class="dates" data-i18n="exp3_dates">February 2018 - November 2024</p>
+                        <p data-i18n="exp3_desc">Develop firmware and hardware design for different applications like motor drivers, medical applications, temperature controllers, custom keyboards, power supply, solar energy conversion, and so on.</p>
                     </article>
                 </div>
             </div>
@@ -135,17 +142,17 @@
 
         <section id="projects" class="projects-section">
             <div class="container">
-                <h2>Projects</h2>
+                <h2 data-i18n="projects_title">Projects</h2>
                 <div class="projects-grid">
                     <article class="project-card">
-                        <h3>ERP Web Application</h3>
-                        <p class="project-description">A comprehensive ERP platform designed for real companies to manage resources and operations. Built for high performance and scalability, featuring automated workflows.</p>
-                        <p class="project-tech"><strong>Stack:</strong> Node.js, TypeScript, PostgreSQL, React, Vite, JWT, DevOps</p>
+                        <h3 data-i18n="proj1_title">ERP Web Application</h3>
+                        <p class="project-description" data-i18n="proj1_desc">A comprehensive ERP platform designed for real companies to manage resources and operations. Built for high performance and scalability, featuring automated workflows.</p>
+                        <p class="project-tech" data-i18n="proj1_tech"><strong>Stack:</strong> Node.js, TypeScript, PostgreSQL, React, Vite, JWT, DevOps</p>
                     </article>
                     <article class="project-card">
-                        <h3>Trading Bridge & Risk Management System</h3>
-                        <p class="project-description">A high-performance trading bridge for brokers, facilitating order execution, transaction tracking, account management, and real-time risk assessment across platforms like MetaTrader and cTrader.</p>
-                        <p class="project-tech"><strong>Stack:</strong> C# .NET 8, C++, PostgreSQL, MongoDB, QuickFIX (FIX Protocol), TCP</p>
+                        <h3 data-i18n="proj2_title">Trading Bridge & Risk Management System</h3>
+                        <p class="project-description" data-i18n="proj2_desc">A high-performance trading bridge for brokers, facilitating order execution, transaction tracking, account management, and real-time risk assessment across platforms like MetaTrader and cTrader.</p>
+                        <p class="project-tech" data-i18n="proj2_tech"><strong>Stack:</strong> C# .NET 8, C++, PostgreSQL, MongoDB, QuickFIX (FIX Protocol), TCP</p>
                     </article>
                 </div>
             </div>
@@ -153,17 +160,17 @@
 
         <section id="education" class="education-section">
             <div class="container">
-                <h2>Education</h2>
+                <h2 data-i18n="edu_title">Education</h2>
                 <div class="education-list">
                     <div class="education-item">
-                        <h3>Electronics Engineering</h3>
-                        <p>Unidades Tecnológicas de Santander</p>
-                        <p class="dates">2020</p>
+                        <h3 data-i18n="edu1_title">Electronics Engineering</h3>
+                        <p data-i18n="edu1_inst">Unidades Tecnológicas de Santander</p>
+                        <p class="dates" data-i18n="edu1_dates">2020</p>
                     </div>
                     <div class="education-item">
-                        <h3>Electronics Technologist</h3>
-                        <p>Unidades Tecnológicas de Santander</p>
-                        <p class="dates">2018</p>
+                        <h3 data-i18n="edu2_title">Electronics Technologist</h3>
+                        <p data-i18n="edu2_inst">Unidades Tecnológicas de Santander</p>
+                        <p class="dates" data-i18n="edu2_dates">2018</p>
                     </div>
                 </div>
             </div>
@@ -171,7 +178,7 @@
 
         <section id="certifications" class="certifications-section">
             <div class="container">
-                <h2>Certifications</h2>
+                <h2 data-i18n="cert_title">Certifications</h2>
                 <ul>
                     <li>SCADA & PLC applications - SENA (2017)</li>
                     <li>Electronic devices design - SENA (2017)</li>
@@ -181,8 +188,8 @@
 
         <section id="contact" class="contact-section">
             <div class="container">
-                <h2>Contact Me</h2>
-                <p>Location: Colombia</p>
+                <h2 data-i18n="contact_title">Contact Me</h2>
+                <p data-i18n="contact_loc">Location: Colombia</p>
                 <div class="contact-links">
                     <a href="mailto:inghector1991@outlook.com"><span class="material-icons">email</span> inghector1991@outlook.com</a>
                     <a href="https://github.com/hectorcarreno" target="_blank" rel="noopener noreferrer"><span class="material-icons">code</span> GitHub</a>
@@ -203,5 +210,6 @@
     <script src="js/theme.js"></script>
     <script src="js/navigation.js"></script>
     <script src="js/animations.js"></script>
+    <script src="js/i18n.js"></script>
 </body>
 </html>
