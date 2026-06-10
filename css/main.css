@@ -1,0 +1,98 @@
+/* Global typography */
+h1, h2, h3 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+}
+
+h1 {
+  font-size: 3.25rem;
+  line-height: 1.1;
+  margin-bottom: var(--space-24);
+}
+
+h2 {
+  font-size: 2.25rem;
+  margin-bottom: var(--space-48);
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-16);
+}
+
+p {
+  margin-bottom: var(--space-16);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  align-items: center;
+  min-height: 80vh;
+  padding-top: var(--space-64);
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-48);
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .hero-content {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+}
+
+.hero-logo {
+  max-width: 350px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: var(--radius-lg);
+  /* box-shadow removed to flatten the image */
+}
+
+@media (max-width: 767px) {
+  .hero-logo {
+    max-width: 220px;
+  }
+  h1 {
+    font-size: 2.25rem;
+  }
+}
+
+/* Contact Section */
+.contact-section {
+  text-align: left;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  margin-top: var(--space-24);
+  align-items: flex-start;
+}
+
+.contact-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.contact-links a:hover {
+  color: var(--color-primary-light);
+  background: transparent;
+}
+
+.material-icons {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}

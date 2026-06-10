@@ -1,0 +1,36 @@
+:root {
+  /* Default: Dark Mode */
+  --color-primary: #8A00FF;
+  --color-primary-light: #A82BFF;
+  --color-accent: #FF2DBA;
+  --color-bg: #050516;
+  --color-bg-elevated: #0C0C35;
+  --color-header-bg: rgba(5, 5, 22, 0.8);
+  --color-text: #FFFFFF;
+  --color-text-secondary: #B7B7D3;
+  --color-border: rgba(138, 0, 255, 0.25);
+  --font-main: "Inter", system-ui, sans-serif;
+  --font-size-base: 16px;
+  --space-8: 8px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --space-80: 80px;
+  --space-120: 120px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --transition-fast: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Light Mode Overrides */
+body.light-mode {
+  --color-bg: #F9F9FB;
+  --color-bg-elevated: #FFFFFF;
+  --color-header-bg: rgba(249, 249, 251, 0.8);
+  --color-text: #050516;
+  --color-text-secondary: #4A4A6A;
+  --color-border: rgba(138, 0, 255, 0.15);
+}
+
